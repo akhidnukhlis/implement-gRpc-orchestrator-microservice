@@ -75,25 +75,6 @@ This is how to list things you need to use the software and how to install them.
    go run main.go
    ```
 
-## List of Endpoint :
-- URL : {host}/user/create
-    - Method        : POST
-    - Body          : { "email" : "", "name" : "", "username" : "", "password" : "" }
-    - Body type     : json
-
-- URL : {host}/user/:id/find
-    - Method        : GET
-    - Path params   : id
-
-- URL : {host}/book/add
-    - Method        : POST
-    - Body          : { "author" : "", "title" : "" }
-    - Body type     : json
-
-- URL : {host}/book/:id/find
-    - Method        : GET
-    - Path params   : id
-
 <!-- ROADMAP -->
 ## Roadmap
 

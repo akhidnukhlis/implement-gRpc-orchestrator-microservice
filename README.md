@@ -33,7 +33,7 @@ This is how to list things you need to use the software and how to install them.
 
 ### Installation
 
-1. Clone example repo author-service
+1. Clone repo author-service
    ```sh
    git clone https://github.com/akhidnukhlis/implement-gRpc-microservice-author-service
    ```
@@ -54,7 +54,7 @@ This is how to list things you need to use the software and how to install them.
    go run main.go
    ```
    
-5. Clone example repo orchestrator-service
+5. Clone repo orchestrator-service
    ```sh
    git clone https://github.com/akhidnukhlis/implement-orchestrator-gRpc-microservice
    ```

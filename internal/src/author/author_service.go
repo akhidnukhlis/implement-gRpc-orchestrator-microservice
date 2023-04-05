@@ -6,26 +6,25 @@ import (
 	"github.com/akhidnukhlis/implement-gRpc-microservice-orchestrator/helpers/errorcodehandling"
 	"github.com/akhidnukhlis/implement-gRpc-microservice-orchestrator/helpers/unique"
 	"github.com/akhidnukhlis/implement-gRpc-microservice-orchestrator/internal/entity"
-	"github.com/akhidnukhlis/implement-gRpc-microservice-orchestrator/internal/entity/author_entity"
 	"github.com/akhidnukhlis/implement-gRpc-microservice-orchestrator/service/grpc/servicecontract"
 	"github.com/akhidnukhlis/implement-gRpc-microservice/grpc/pb"
 )
 
 type service struct {
-	author *servicecontract.GrpcContract
-	err    *errorcodehandling.CodeError
+	repo *servicecontract.GrpcContract
+	err  *errorcodehandling.CodeError
 }
 
 func NewService(author *servicecontract.GrpcContract) *service {
 	return &service{
-		author: author,
+		repo: author,
 	}
 }
 
-// InsertNewAuthor represents algorithm to register new author
-func (s *service) InsertNewAuthor(ctx context.Context, payload *author_entity.AuthorRequest) error {
+// CreateNewAuthor represents algorithm to register new repo
+func (s *service) CreateNewAuthor(ctx context.Context, payload *entity.AuthorRequest) error {
 
-	err := author_entity.AuthorRequestValidate(payload)
+	err := entity.AuthorRequestValidate(payload)
 	if err != nil {
 		return err
 	}
@@ -36,7 +35,7 @@ func (s *service) InsertNewAuthor(ctx context.Context, payload *author_entity.Au
 		Email:    payload.Email,
 	}
 
-	_, err = s.author.Author.ServiceRegisterAuthor(ctx, author)
+	_, err = s.repo.Author.ServiceRegisterAuthor(ctx, author)
 	if err != nil {
 		return err
 	}
@@ -44,8 +43,8 @@ func (s *service) InsertNewAuthor(ctx context.Context, payload *author_entity.Au
 	return nil
 }
 
-// FindAuthor represents algorithm to find author by id
-func (s *service) FindAuthor(ctx context.Context, authorID string) (*author_entity.Authors, error) {
+// FindAuthor represents algorithm to find repo by id
+func (s *service) FindAuthor(ctx context.Context, authorID string) (*entity.Authors, error) {
 	if err := unique.ValidateUUID(authorID); err != nil {
 		return nil, entity.ErrAuthorNotExist
 	}
@@ -54,12 +53,12 @@ func (s *service) FindAuthor(ctx context.Context, authorID string) (*author_enti
 		Id: authorID,
 	}
 
-	author, err := s.author.Author.ServiceFindAuthorById(ctx, payload)
+	author, err := s.repo.Author.ServiceFindAuthorById(ctx, payload)
 	if err != nil {
 		return nil, err
 	}
 
-	usrData := &author_entity.Authors{
+	usrData := &entity.Authors{
 		ID:        authorID,
 		Name:      author.Data.Name,
 		Nickname:  author.Data.Nickname,

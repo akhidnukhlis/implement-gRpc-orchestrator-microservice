@@ -8,19 +8,18 @@ import (
 
 	"github.com/akhidnukhlis/implement-gRpc-microservice-orchestrator/helpers"
 	"github.com/akhidnukhlis/implement-gRpc-microservice-orchestrator/internal/entity"
-	"github.com/akhidnukhlis/implement-gRpc-microservice-orchestrator/internal/entity/author_entity"
 	"github.com/akhidnukhlis/implement-gRpc-microservice-orchestrator/internal/src/author"
 	"github.com/gorilla/mux"
 	"github.com/pkg/errors"
 )
 
 type AuthorHandler struct {
-	service author.Service
+	authorService author.Service
 }
 
 func NewAuthorHandler(service author.Service) *AuthorHandler {
 	return &AuthorHandler{
-		service: service,
+		authorService: service,
 	}
 }
 
@@ -34,14 +33,14 @@ func (ah *AuthorHandler) RegisterNewAuthor(w http.ResponseWriter, r *http.Reques
 		return
 	}
 
-	var payload author_entity.AuthorRequest
+	var payload entity.AuthorRequest
 	err = json.Unmarshal(body, &payload)
 	if err != nil {
 		responder.ErrorWithStatusCode(w, http.StatusUnprocessableEntity, fmt.Sprint(err))
 		return
 	}
 
-	err = ah.service.InsertNewAuthor(ctx, &payload)
+	err = ah.authorService.CreateNewAuthor(ctx, &payload)
 	if err != nil {
 		causer := errors.Cause(err)
 		switch causer {
@@ -65,7 +64,7 @@ func (ah *AuthorHandler) FindUserByAuthorID(w http.ResponseWriter, r *http.Reque
 		ctx       = r.Context()
 	)
 
-	findAuthor, err := ah.service.FindAuthor(ctx, authorID)
+	findAuthor, err := ah.authorService.FindAuthor(ctx, authorID)
 	if err != nil {
 		causer := errors.Cause(err)
 		switch causer {
@@ -78,6 +77,6 @@ func (ah *AuthorHandler) FindUserByAuthorID(w http.ResponseWriter, r *http.Reque
 		}
 	}
 
-	responder.SuccessJSON(w, findAuthor, http.StatusOK, "Author found")
+	responder.SuccessJSON(w, findAuthor, http.StatusOK, "Repo found")
 	return
 }

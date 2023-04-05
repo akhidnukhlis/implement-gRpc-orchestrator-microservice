@@ -1,4 +1,4 @@
-package author_entity
+package entity
 
 import (
 	"time"

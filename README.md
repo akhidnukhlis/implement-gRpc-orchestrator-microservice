@@ -27,15 +27,15 @@ This is how to list things you need to use the software and how to install them.
   ```
 
 ### Dependency repositories
-- Service Author  : https://github.com/akhidnukhlis/implement-gRpc-microservice-author-service
-- Protobank     : https://github.com/akhidnukhlis/implement-gRpc-microservice
+- Service Author  : https://github.com/akhidnukhlis/implement-gRpc-server-author-service
+- Protobank     : https://github.com/akhidnukhlis/implement-gRpc-proto-bank
 
 
 ### Installation
 
 1. Clone repo author-service
    ```sh
-   git clone https://github.com/akhidnukhlis/implement-gRpc-microservice-author-service
+   git clone github.com/akhidnukhlis/implement-gRpc-server-author-service
    ```
    
 2. Edit `env.example` to `.env` and setup your environment
@@ -56,7 +56,7 @@ This is how to list things you need to use the software and how to install them.
    
 5. Clone repo orchestrator-service
    ```sh
-   git clone https://github.com/akhidnukhlis/implement-orchestrator-gRpc-microservice
+   git clone github.com/akhidnukhlis/implement-gRpc-orchestrator-microservice
    ```
    
 6. Edit `env.example` to `.env` and setup your environment

@@ -2,9 +2,9 @@ package tests
 
 import (
 	"context"
-	"github.com/akhidnukhlis/implement-gRpc-microservice-orchestrator/config/providers/grpc/servicecontract"
-	"github.com/akhidnukhlis/implement-gRpc-microservice-orchestrator/helpers/errorcodehandling"
-	"github.com/akhidnukhlis/implement-gRpc-microservice-orchestrator/internal/entity"
+	"github.com/akhidnukhlis/implement-gRpc-orchestrator-microservice/config/providers/grpc/servicecontract"
+	"github.com/akhidnukhlis/implement-gRpc-orchestrator-microservice/helpers/errorcodehandling"
+	"github.com/akhidnukhlis/implement-gRpc-orchestrator-microservice/internal/entity"
 	"github.com/jinzhu/gorm"
 )
 

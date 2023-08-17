@@ -2,7 +2,7 @@ package config
 
 import (
 	"fmt"
-	"github.com/akhidnukhlis/implement-gRpc-microservice-orchestrator/internal/routers"
+	"github.com/akhidnukhlis/implement-gRpc-orchestrator-microservice/internal/routers"
 	"log"
 	"os"
 

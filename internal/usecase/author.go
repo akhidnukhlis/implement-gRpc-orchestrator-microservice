@@ -6,9 +6,9 @@ import (
 	"io/ioutil"
 	"net/http"
 
-	"github.com/akhidnukhlis/implement-gRpc-microservice-orchestrator/helpers"
-	"github.com/akhidnukhlis/implement-gRpc-microservice-orchestrator/internal/entity"
-	"github.com/akhidnukhlis/implement-gRpc-microservice-orchestrator/internal/service/author"
+	"github.com/akhidnukhlis/implement-gRpc-orchestrator-microservice/helpers"
+	"github.com/akhidnukhlis/implement-gRpc-orchestrator-microservice/internal/entity"
+	"github.com/akhidnukhlis/implement-gRpc-orchestrator-microservice/internal/service/author"
 	"github.com/gorilla/mux"
 	"github.com/pkg/errors"
 )

@@ -1,7 +1,7 @@
 package client
 
 import (
-	"github.com/akhidnukhlis/implement-gRpc-microservice/grpc/pb"
+	"github.com/akhidnukhlis/implement-gRpc-proto-bank/grpc/pb"
 	"log"
 	"os"
 

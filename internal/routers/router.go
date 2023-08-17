@@ -1,10 +1,10 @@
 package routers
 
 import (
-	"github.com/akhidnukhlis/implement-gRpc-microservice-orchestrator/config/providers/grpc/client"
-	"github.com/akhidnukhlis/implement-gRpc-microservice-orchestrator/config/providers/grpc/servicecontract"
-	"github.com/akhidnukhlis/implement-gRpc-microservice-orchestrator/internal/service/author"
-	"github.com/akhidnukhlis/implement-gRpc-microservice-orchestrator/internal/usecase"
+	"github.com/akhidnukhlis/implement-gRpc-orchestrator-microservice/config/providers/grpc/client"
+	"github.com/akhidnukhlis/implement-gRpc-orchestrator-microservice/config/providers/grpc/servicecontract"
+	"github.com/akhidnukhlis/implement-gRpc-orchestrator-microservice/internal/service/author"
+	"github.com/akhidnukhlis/implement-gRpc-orchestrator-microservice/internal/usecase"
 )
 
 func (se *Serve) initializeRoutes() {

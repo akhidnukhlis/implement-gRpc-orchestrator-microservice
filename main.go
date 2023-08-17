@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/akhidnukhlis/implement-gRpc-microservice-orchestrator/config"
+	"github.com/akhidnukhlis/implement-gRpc-orchestrator-microservice/config"
 )
 
 func main() {

@@ -2,7 +2,7 @@ package routers
 
 import (
 	"fmt"
-	"github.com/akhidnukhlis/implement-gRpc-microservice-orchestrator/internal/usecase"
+	"github.com/akhidnukhlis/implement-gRpc-orchestrator-microservice/internal/usecase"
 	"log"
 	"net/http"
 	"os"

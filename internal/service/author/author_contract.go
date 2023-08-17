@@ -2,7 +2,7 @@ package author
 
 import (
 	"context"
-	"github.com/akhidnukhlis/implement-gRpc-microservice-orchestrator/internal/entity"
+	"github.com/akhidnukhlis/implement-gRpc-orchestrator-microservice/internal/entity"
 )
 
 type Service interface {

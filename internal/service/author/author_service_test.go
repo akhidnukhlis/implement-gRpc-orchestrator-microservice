@@ -1,9 +1,9 @@
 package author
 
 import (
-	"github.com/akhidnukhlis/implement-gRpc-microservice-orchestrator/external/seeders"
-	"github.com/akhidnukhlis/implement-gRpc-microservice-orchestrator/external/tests"
-	"github.com/akhidnukhlis/implement-gRpc-microservice-orchestrator/internal/entity"
+	"github.com/akhidnukhlis/implement-gRpc-orchestrator-microservice/external/seeders"
+	"github.com/akhidnukhlis/implement-gRpc-orchestrator-microservice/external/tests"
+	"github.com/akhidnukhlis/implement-gRpc-orchestrator-microservice/internal/entity"
 	"github.com/stretchr/testify/assert"
 	"testing"
 )

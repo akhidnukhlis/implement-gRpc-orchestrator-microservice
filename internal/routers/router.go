@@ -1,10 +1,10 @@
 package routers
 
 import (
-	"github.com/akhidnukhlis/implement-gRpc-microservice-orchestrator/handler"
-	"github.com/akhidnukhlis/implement-gRpc-microservice-orchestrator/internal/src/author"
-	"github.com/akhidnukhlis/implement-gRpc-microservice-orchestrator/service/grpc/client"
-	"github.com/akhidnukhlis/implement-gRpc-microservice-orchestrator/service/grpc/servicecontract"
+	"github.com/akhidnukhlis/implement-gRpc-microservice-orchestrator/config/providers/grpc/client"
+	"github.com/akhidnukhlis/implement-gRpc-microservice-orchestrator/config/providers/grpc/servicecontract"
+	"github.com/akhidnukhlis/implement-gRpc-microservice-orchestrator/internal/service/author"
+	"github.com/akhidnukhlis/implement-gRpc-microservice-orchestrator/internal/usecase"
 )
 
 func (se *Serve) initializeRoutes() {
@@ -19,7 +19,7 @@ func (se *Serve) initializeRoutes() {
 
 	//=== AUTHOR ===
 	s := author.NewService(r)
-	h := handler.NewAuthorHandler(s)
+	h := usecase.NewAuthorHandler(s)
 	//=========================================================
 
 	//======================== ENDPOINT ========================
@@ -27,7 +27,6 @@ func (se *Serve) initializeRoutes() {
 
 	//=== AUTHOR ===
 	se.Router.HandleFunc("/author/create", h.RegisterNewAuthor).Methods("POST")
-	se.Router.HandleFunc("/author/{id}/find", h.FindUserByAuthorID).Methods("GET")
+	se.Router.HandleFunc("/author/detail/{id}", h.FindUserByAuthorID).Methods("GET")
 	//==========================================================
-
 }

@@ -2,10 +2,10 @@ package config
 
 import (
 	"fmt"
+	"github.com/akhidnukhlis/implement-gRpc-microservice-orchestrator/internal/routers"
 	"log"
 	"os"
 
-	"github.com/akhidnukhlis/implement-gRpc-microservice-orchestrator/config/routers"
 	"github.com/joho/godotenv"
 )
 

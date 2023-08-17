@@ -1,4 +1,4 @@
-package handler
+package usecase
 
 import (
 	"encoding/json"
@@ -8,7 +8,7 @@ import (
 
 	"github.com/akhidnukhlis/implement-gRpc-microservice-orchestrator/helpers"
 	"github.com/akhidnukhlis/implement-gRpc-microservice-orchestrator/internal/entity"
-	"github.com/akhidnukhlis/implement-gRpc-microservice-orchestrator/internal/src/author"
+	"github.com/akhidnukhlis/implement-gRpc-microservice-orchestrator/internal/service/author"
 	"github.com/gorilla/mux"
 	"github.com/pkg/errors"
 )

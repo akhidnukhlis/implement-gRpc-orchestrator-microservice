@@ -2,11 +2,11 @@ package author
 
 import (
 	"context"
+	"github.com/akhidnukhlis/implement-gRpc-microservice-orchestrator/config/providers/grpc/servicecontract"
 
 	"github.com/akhidnukhlis/implement-gRpc-microservice-orchestrator/helpers/errorcodehandling"
 	"github.com/akhidnukhlis/implement-gRpc-microservice-orchestrator/helpers/unique"
 	"github.com/akhidnukhlis/implement-gRpc-microservice-orchestrator/internal/entity"
-	"github.com/akhidnukhlis/implement-gRpc-microservice-orchestrator/service/grpc/servicecontract"
 	"github.com/akhidnukhlis/implement-gRpc-microservice/grpc/pb"
 )
 
@@ -58,7 +58,7 @@ func (s *service) FindAuthor(ctx context.Context, authorID string) (*entity.Auth
 		return nil, err
 	}
 
-	usrData := &entity.Authors{
+	authorData := &entity.Authors{
 		ID:        authorID,
 		Name:      author.Data.Name,
 		Nickname:  author.Data.Nickname,
@@ -67,5 +67,5 @@ func (s *service) FindAuthor(ctx context.Context, authorID string) (*entity.Auth
 		UpdatedAt: author.Data.UpdatedAt,
 	}
 
-	return usrData, nil
+	return authorData, nil
 }

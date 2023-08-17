@@ -2,11 +2,11 @@ package routers
 
 import (
 	"fmt"
+	"github.com/akhidnukhlis/implement-gRpc-microservice-orchestrator/internal/usecase"
 	"log"
 	"net/http"
 	"os"
 
-	"github.com/akhidnukhlis/implement-gRpc-microservice-orchestrator/handler"
 	"github.com/gorilla/mux"
 	"github.com/jinzhu/gorm"
 
@@ -15,7 +15,7 @@ import (
 )
 
 type Service struct {
-	User *handler.AuthorHandler
+	User *usecase.AuthorHandler
 }
 
 type Serve struct {
@@ -55,7 +55,7 @@ func (s *Serve) Initialize(Dbdriver, DbUser, DbPassword, DbPort, DbHost, DbName 
 	s.initializeRoutes()
 }
 
-// Run is used to execute connection and run our service
+// Run is used to execute connection and run our providers
 func (s *Serve) Run() {
 	port := os.Getenv("APP_PORT")
 	fmt.Println("Listening to port ", port)

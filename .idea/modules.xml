@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../implement-orchestrator-gRpc-microservice/.idea/implement-orchestrator-gRpc-microservice.iml" filepath="$PROJECT_DIR$/../implement-orchestrator-gRpc-microservice/.idea/implement-orchestrator-gRpc-microservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/implement-gRpc-orchestrator-microservice.iml" filepath="$PROJECT_DIR$/.idea/implement-gRpc-orchestrator-microservice.iml" />
     </modules>
   </component>
 </project>

@@ -58,6 +58,6 @@ func (s *Serve) Initialize(Dbdriver, DbUser, DbPassword, DbPort, DbHost, DbName 
 // Run is used to execute connection and run our providers
 func (s *Serve) Run() {
 	port := os.Getenv("APP_PORT")
-	fmt.Println("Listening to port ", port)
+	fmt.Println("Listening to port", port)
 	log.Fatal(http.ListenAndServe(":"+port, s.Router))
 }

@@ -3,6 +3,7 @@ module github.com/akhidnukhlis/implement-gRpc-orchestrator-microservice
 go 1.19
 
 require (
+	github.com/akhidnukhlis/implement-gRpc-proto-bank v0.0.0-20230817033415-07ae95f8bdb0
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible
 	github.com/go-ozzo/ozzo-validation/v4 v4.3.0
 	github.com/go-sql-driver/mysql v1.7.0
@@ -18,7 +19,6 @@ require (
 )
 
 require (
-	github.com/akhidnukhlis/implement-gRpc-proto-bank v0.0.0-20230817033415-07ae95f8bdb0 // indirect
 	github.com/davecgh/go-spew v1.1.0 // indirect
 	github.com/golang/protobuf v1.5.3 // indirect
 	github.com/jinzhu/inflection v1.0.0 // indirect
